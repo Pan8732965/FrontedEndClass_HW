@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ch5 - 練習5 教學意見調查表 </title>
+</head>
+<body>
+
+    <h2> 教學意見調查表 </h2>
+
+<form action="">
+    <fieldset>
+        <legend>個人及課程資料</legend>
+            <label for="ClassName">1. 科目名稱：</label>
+            <input type="text" id="ClassName" name="ClassName">
+        <br><br>
+            <label for="department">2. 請選擇系所：</label>
+                <select name="SelectDepartment" id="SelectDepartment">
+                    <option value="ChineseLiterature">中國語文學系</option>
+                    <option value="Math">數學系</option>
+                    <option value="ForeignLanguages">外國語文學系</option>
+                    <option value="InformationManagement">資訊管理學系</option>
+                </select>
+        <br><br>
+            <label for="Teacher">3. 講師：</label>
+            <input type="text" id="Teacher" name="Teacher">
+        <br><br>
+            <label for="sex">4. 性別：</label>
+            <input type="radio" id="sex" name="sex" value="Male" checked>
+            <label for="Male">生理男</label>
+            <input type="radio" id="sex" name="sex" value="Female">
+            <label for="Female">生理女</label>
+        <br><br>
+            <label for="ClassDate">4. 開課日期:</label>
+            <input type="date" id="ClassDate" name="classDate">
+    </fieldset>
+
+    <fieldset>
+        <legend>意見調查</legend>
+
+            <label for="AttendanceQuestion">1. 這門課您的出席狀況是：</label>
+
+            <input type="radio" id="AttendanceQuestion" name="AttendanceQuestion" value="AllAttended" checked>
+            <label for="AllAttended">沒有缺課</label>
+
+            <input type="radio" id="AttendanceQuestion" name="AttendanceQuestion" value="AbsentOneToThree">
+            <label for="AbsentOneToThree">缺課1~3次</label>
+
+            <input type="radio" id="AttendanceQuestion" name="AttendanceQuestion" value="AbsentFourToSix">
+            <label for="AbsentFourToSix">缺課4~6次</label>
+
+            <input type="radio" id="AttendanceQuestion" name="AttendanceQuestion" value="AbsentAboveSix">
+            <label for="AbsentAboveSix">缺課6次以上</label>
+
+            <br><br>
+
+            <label for="LearningAttitude">2. 這門課您的學習狀況是：</label>
+
+            <input type="radio" id="LearningAttitude" name="LearningAttitude" value="VeryWell" checked>
+            <label for="VeryWell">很認真</label>
+
+            <input type="radio" id="LearningAttitude" name="LearningAttitude" value="QuiteWell">
+            <label for="QuiteWell">還算認真</label>
+
+            <input type="radio" id="LearningAttitude" name="LearningAttitude" value="NotListening">
+            <label for="NotListening">很不認真</label>
+
+            <br><br>
+
+            <label for="ChooseCourseReason">3. 修習這門課的原因(可複選)：</label>
+
+            <input type="checkbox" id="ChooseCourseReason" name="ChooseCourseReason" value="compulsory" checked>
+            <label for="compulsory"> 必修</label>
+
+            <input type="checkbox" id="ChooseCourseReason" name="ChooseCourseReason" value="AccumulateCredits">
+            <label for="AccumulateCredits">湊學分</label>
+
+            <input type="checkbox" id="ChooseCourseReason" name="ChooseCourseReason" value="PersonalInterest">
+            <label for="PersonalInterest">個人興趣</label>
+
+            <input type="checkbox" id="ChooseCourseReason" name="ChooseCourseReason" value="OtherReason">
+            <label for="OtherReason">其他原因</label>
+
+            <br><br>
+
+            <label for="Suggestion">4. 請簡述您對此課程的期望或改進建議：</label> <br>
+            <textarea id="Suggestion" name="Suggestion" rows="4" cols="50" dir="ltr"></textarea>
+            <script> <!-- 使輸入的光標總是向左對齊 -->
+                document.getElementById('myTextarea').addEventListener('keydown', function(event) {
+                    var textarea = event.target;
+                    textarea.style.textAlign = 'left';
+                });
+            </script>
+
+    </fieldset>
+    <br>
+    <input type="submit" value="送出">
+    <input type="submit" value="重寫">
+</form>
+
+    
+</body>
+</html>

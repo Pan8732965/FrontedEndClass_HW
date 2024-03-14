@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+	<title>表單元素</title>
+  </head>	
+  <body>
+    <p>檔案下載進度：<progress id="pb" max="100"><span>0</span>%</progress></p>
+    <script>
+      var progressBar = document.getElementById('pb');
+      var i = 10;
+      function updateProgress(newValue) {
+        progressBar.value = newValue;
+        progressBar.getElementsByTagName('span')[0].innerText = newValue;	
+      }
+      function showProgress() {
+        if (i <= 100) {
+		  updateProgress(i);
+	      i += 10; 
+		}
+		else clearInterval();
+      }
+      window.setInterval("showProgress();", 500);
+    </script>
+  </body>
+</html>
