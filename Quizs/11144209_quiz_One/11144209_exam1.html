@@ -1,0 +1,186 @@
+<!-- 
+
+    1. 修復表格框線不見問題
+    2. <input type="radio" id="GenderMale"> 生理男性
+        <input type="radio" id="GenderFemale"> 生理女性
+        以上須調整為只能單一選項。
+    3. 備註部分的textarea需要對齊備註的row
+
+--> 
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Exam 1 - 11144209 </title>
+    <style>
+
+        table {
+            border-collapse: collapse;
+            border-width: 50px;
+            border-color: black;
+            border-radius: 10px;
+            width: 1200px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1> 春季旅遊活動報名表 </h1>
+    
+    <table>
+
+        <tr>
+
+            <th colspan="4"> 欲報名的活動梯次 </th>
+
+        </tr>
+
+            <form action="post" name="Event">
+
+                <tr> 
+
+                    <td> <img src="photos/event1.jpg" alt="EventOne" width="300px" height="200px"> </td>
+                    <td> <img src="photos/event2.jpg" alt="EventTwo" width="300px" height="200px"> </td>
+                    <td> <img src="photos/event3.jpg" alt="EventThree" width="300px" height="200px"> </td>
+                    <td> <img src="photos/event4.jpg" alt="EventFour" width="300px" height="200px"> </td>
+
+                </tr>
+        
+        
+                <tr> 
+
+                    <td> <input type="radio" id="EventOne" name="Event"> 走春賞夜葉之旅 04/06(六)  </td>
+                    <td> <input type="radio" id="EventTwo" name="Event"> 森林探險之旅 04/13(六) </td>
+                    <td> <input type="radio" id="EventThree" name="Event"> 草原生態之旅 04/20(六) </td>
+                    <td> <input type="radio" id="EventFour" name="Event"> 探索星空之旅 04/27(六) </td>
+
+                </tr>
+
+            </form>
+        
+
+        <tr> 
+            <th colspan="4"> 報名者個人資料 </th> 
+        </tr>
+
+            <form action="post" name="PersonalInformation">
+
+                <tr> 
+
+                    <th>姓名</th>
+                    <td>
+                        <input type="text" id="PersonalName">
+                    </td>
+                    <th>性別</th>
+                    <td>
+                        <input type="radio" id="GenderMale"> 生理男性
+                        <input type="radio" id="GenderFemale"> 生理女性
+                    </td>
+
+                </tr>
+                
+                <tr> 
+
+                    <th>身分證字號</th>
+                    <td><input type="text" id="PersonalIdNum"></td>
+                    <th>出生年月日</th>
+                    <td><input type="date" id="BirthDate" ></td>
+
+                </tr>
+
+                <tr> 
+
+                    <th>連絡電話</th>
+                    <td><input type="text" id="PersonalPhone"></td>
+                    <th>聯絡Email</th>
+                    <td><input type="text" id="PersonalEMail"></td>
+
+                </tr>
+
+                <tr> 
+
+                    <th>飲食習慣(複選)</th>
+                    <td>
+                        <input type="checkbox" id="NormalMeal" name="MealHabit">葷食
+                        <input type="checkbox" id="NoMeat" name="MealHabit">素食
+                        <input type="checkbox" id="HaveMilkEgg" name="MealHabit">奶蛋素
+                        <input type="checkbox" id="OtherMeal" name="MealHabit">其他飲食習慣
+                    </td>
+
+                </tr>
+
+                <tr> 
+
+                    <th>健康狀況(複選)</th>
+                    <td rowspan="4">
+                        <input type="checkbox" id="Air" name="HealthSituation">氣喘
+                        <input type="checkbox" id="Mountain" name="HealthSituation">高山症
+                        <input type="checkbox" id="Height" name="HealthSituation">懼高症
+                        <input type="checkbox" id="HighBloodPressure" name="HealthSituation">高血壓
+                        <input type="checkbox" id="Suagr" name="HealthSituation">糖尿病
+                        <input type="checkbox" id="OtherHeathSituation" name="HealthSituation">其他病症
+                    </td>
+
+                </tr>
+
+                <tr> 
+
+                    <th>備註</th>
+                    <td><textarea id="OtherToTell" cols="4" rows="4" ></textarea></td>
+
+                </tr>
+
+            </form>
+
+        
+        
+        <tr> 
+            <th colspan="4"> 緊急連絡人 </th>
+        </tr>
+        
+        <tr>
+
+            <form action="post" name="EmergencyContactPerson">
+
+                <th>姓名</th>
+                <td><input type="text" id="EmergencyPersonName"></td>
+                <th>連絡電話</th>
+                <td><input type="text" id="EmergencyPersonPhone"></td>
+                
+        </tr>
+
+        <tr>
+
+            <th>聯絡地址</th>
+            <td>
+                input: <!-- 加入下拉式選單，選項分別為台北市、新北市、桃園市、新竹市 -->
+                <input type="text" id="EmergencyPersonAddress">
+            </td>
+
+            
+
+        </tr>
+
+
+            </form>
+        
+    </table>
+
+        <br>
+
+        <input type="button" value="送出"> 
+        <input type="button" value="清除"> 
+
+
+    
+    
+
+</body>
+</html>

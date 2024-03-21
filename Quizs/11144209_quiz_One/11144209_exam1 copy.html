@@ -1,0 +1,134 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam 1 - 11144209</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            text-align: center;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left; /* 將文字左對齊，提高可讀性 */
+        }
+        label {
+            display: inline-block;
+            width: 120px; /* 調整標籤欄位的寬度 */
+            text-align: right; /* 將標籤右對齊 */
+            margin-right: 20px; /* 增加標籤與輸入欄位之間的間距 */
+        }
+        input[type="radio"] {
+            margin-right: 10px; /* 調整單選按鈕間距 */
+        }
+        textarea {
+            vertical-align: top;
+        }
+    </style>
+</head>
+<body>
+    <h1>春季旅遊活動報名表</h1>
+    <form action="post" name="Event">
+        <fieldset>
+            <legend>欲報名的活動梯次</legend>
+            <table>
+                <tr> 
+                    <td><label for="EventOne"><img src="photos/event1.jpg" alt="EventOne" width="300px" height="200px"></label></td>
+                    <td><label for="EventTwo"><img src="photos/event2.jpg" alt="EventTwo" width="300px" height="200px"></label></td>
+                    <td><label for="EventThree"><img src="photos/event3.jpg" alt="EventThree" width="300px" height="200px"></label></td>
+                    <td><label for="EventFour"><img src="photos/event4.jpg" alt="EventFour" width="300px" height="200px"></label></td>
+                </tr>
+                <tr> 
+                    <td><input type="radio" id="EventOne" name="Event">走春賞夜葉之旅 04/06(六)</td>
+                    <td><input type="radio" id="EventTwo" name="Event">森林探險之旅 04/13(六)</td>
+                    <td><input type="radio" id="EventThree" name="Event">草原生態之旅 04/20(六)</td>
+                    <td><input type="radio" id="EventFour"  name="Event">探索星空之旅 04/27(六)</td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>報名者個人資料</legend>
+            <table>
+                <tr> 
+                    <td><label for="PersonalName">姓名：</label></td>
+                    <td><input type="text" id="PersonalName" required></td>
+                    <td><label for="GenderMale">性別：</label></td>
+                    <td>
+                        <input type="radio" id="GenderMale" name="Gender" required><label for="GenderMale">男性</label>
+                        <input type="radio" id="GenderFemale" name="Gender" required><label for="GenderFemale">女性</label>
+                    </td>
+                </tr>
+                <tr> 
+                    <td><label for="PersonalIdNum">身分證字號：</label></td>
+                    <td><input type="text" id="PersonalIdNum" pattern="[A-Z][12][0-9]{8}" title="請輸入正確的身分證字號格式" required></td>
+                    <td><label for="BirthDate">出生年月日：</label></td>
+                    <td><input type="date" id="BirthDate" required></td>
+                </tr>
+                <tr> 
+                    <td><label for="PersonalPhone">連絡電話：</label></td>
+                    <td><input type="tel" id="PersonalPhone" pattern="[0-9]{10}" title="請輸入正確的電話號碼格式 (10位數)" required></td>
+                    <td><label for="PersonalEMail">聯絡Email：</label></td>
+                    <td><input type="email" id="PersonalEMail" required></td>
+                </tr>
+                <tr> 
+                    <td><label for="MealHabit">飲食習慣：</label></td>
+                    <td colspan="3">
+                        <input type="checkbox" id="NormalMeal" name="MealHabit">葷食
+                        <input type="checkbox" id="NoMeat" name="MealHabit">素食
+                        <input type="checkbox" id="HaveMilkEgg" name="MealHabit">奶蛋素
+                        <input type="checkbox" id="OtherMeal" name="MealHabit">其他飲食習慣
+                    </td>
+                </tr>
+                <tr> 
+                    <td rowspan="7"><label>健康狀況：</label></td>
+                    <td colspan="3">
+                        <input type="checkbox" id="Air" name="HealthSituation">氣喘
+                        <input type="checkbox" id="Mountain" name="HealthSituation">高山症
+                        <input type="checkbox" id="Height" name="HealthSituation">懼高症
+                        <input type="checkbox" id="HighBloodPressure" name="HealthSituation">高血壓
+                        <input type="checkbox" id="Suagr" name="HealthSituation">糖尿病
+                        <input type="checkbox" id="OtherHeathSituation" name="HealthSituation">其他病症
+                    </td>
+                </tr>
+                <tr> 
+                    <td colspan="3"><label for="OtherToTell">備註：</label></td>
+                </tr>
+                <tr>
+                    <td colspan="3"><textarea id="OtherToTell" cols="40" rows="4" required></textarea></td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>緊急連絡人</legend>
+            <table>
+                <tr>
+                    <td><label for="EmergencyPersonName">姓名：</label></td>
+                    <td><input type="text" id="EmergencyPersonName" required></td>
+                    <td><label for="EmergencyPersonPhone">連絡電話：</label></td>
+                    <td><input type="tel" id="EmergencyPersonPhone" pattern="[0-9]{10}" title="請輸入正確的電話號碼格式 (10位數)" required></td>
+                </tr>
+                <tr>
+                    <td><label for="EmergencyPersonAddress">聯絡地址：</label></td>
+                    <td colspan="3">
+                        <select id="EmergencyPersonAddress" required>
+                            <option value="Taipei">台北市</option>
+                            <option value="NewTaipei">新北市</option>
+                            <option value="Taoyuan">桃園市</option>
+                            <option value="Hsinchu">新竹市</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        <input type="submit" value="送出"> <!-- 將按鈕類型更改為 submit，以提交表單 -->
+        <input type="reset" value="清除"> <!-- 使用 reset 來清除表單 -->
+    </form>
+</body>
+</html>
+
+

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>position_demo</title>
+    <style>
+        /*設定各個區塊(div)的定位方式與位移量(top, bottom, right, left)*/
+        div.relative {
+            
+            width: 500px;
+            height: 400px;
+            border: 3px solid #73AD21;
+        }
+
+        div.absolute {
+                      
+            width: 500px;
+            height: 400px;
+            border: 3px solid blue;
+        }
+
+        div.fix {
+          
+            width:40px;
+            height:40px;
+            background-color: yellow;    
+     
+        }
+
+        .txt{
+            text-align:center;
+            vertical-align: 30px;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h2>position: relative;</h2>
+
+    <p>An element with position: relative; is positioned relative to its normal position:</p>
+
+    <!--網頁內容要包成區塊才能做排版-->
+    <div class="relative">
+        <h2>Position: relative;</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam aut ratione eos eum aperiam libero dolorum quaerat iusto nostrum dignissimos quod amet inventore, fugiat iure laudantium pariatur natus. Rerum, laboriosam.</p>
+        <img src="https://picsum.photos/300/200?random=1" alt="">
+    </div>
+
+    <div class="pre-absolute">
+        <div class="absolute">
+            <h2>Position: absolute;</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et placeat id perferendis, ducimus ullam obcaecati cum est debitis pariatur aliquam iste ipsum quisquam hic repellat rerum corporis consequuntur explicabo illum?</p>
+            <img src="https://picsum.photos/300/200?random=2" alt="">
+        </div>
+    </div>
+
+    <div class="fix">
+        <p class="txt">Top</p>
+    </div>
+
+</body>
+</html>
+
+
