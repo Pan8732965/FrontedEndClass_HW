@@ -1,0 +1,33 @@
+<!-- 
+
+    1. 圖片：<img src=".jpg" alt="Zoo" usemap="#ZooMap" width="" height=""> width and height can take the photo detail for reference.
+    2. map:
+    <map name="ZooMap">
+        <area shape="circle,rect,ploy" coords="" alt="AreaNameHere" href="aaa.html">
+        // map rect, poly 為逆時針記點座標，而形成圖形。
+    </map>
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>前端 Ch7-1 作業 11144209 潘驄杰</title>
+</head>
+<body>
+    <h1> 動物園地圖座標 </h1>
+    <p>可以點擊「可愛動物區」、「沙漠動物區」、「台灣鄉土動物區」進入該特別區域 </p>
+
+    <img src="ZOO.JPG" alt="Zoo" usemap="#ZooMap" width="482" height="332">
+
+    <map name="ZooMap">
+        <area shape="circle" coords="298,297,30" alt="CuteArea" href="cute.html">
+        <area shape="rect" coords="218,156,297,185" alt="DesertArea" href="desert.html">
+        <area shape="poly" coords="402,232,371,253,388,287,460,270" alt="CountryArea" href="country.html"> 
+    </map>
+
+    
+</body>
+</html>

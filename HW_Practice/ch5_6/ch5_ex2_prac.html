@@ -1,0 +1,101 @@
+<!--
+
+    1. establishment of the table style:
+
+    table{
+        border-collapse: collapse; // collapse: turn into the seperate table, instead of the shared table.
+        width:100%;
+    }
+
+    th, td{
+        border:1px solid black;
+        padding:8px; // 表格標題與資料的個別面積填充
+        text-align:center;
+    }
+
+    2. establishment of the table 
+
+    <table>
+
+        <tr> //列
+
+            <td> ... </td> 表格個別格的資料
+
+        </tr> 
+
+
+    </table>
+
+    -> 建立表格方法：(1) 先看幾列，先照列數建立<tr> ; (2) 在依序填充 <td> 
+        (3) 依照：表格資料 <td> rowspan 為往右、表格標題 <th> rowspan 為往下的規則視情況延伸
+
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="eng">
+
+    <head>
+
+        <meta charset="utf-8">
+        <title> ch5 ex2 practice </title>
+        <style>
+            
+            table{
+                border-collapse: collapse;
+                width:100%;
+            }
+
+            th, td{
+                border: 1px solid black;
+                padding: 8px;
+                text-align: center;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <table>
+
+            <tr> 
+                <th> Name </th>
+                <th> EX1 </th>
+                <th> EX2 </th>
+            </tr>
+            
+            <tr>  
+                <th> A </th>
+                <td rowspan="2">100</td> <!-- 表格資料 <td> rowspan 為往右 -->
+                <td rowspan="2">50</td>
+            </tr>
+
+            <tr> 
+                <th> B </th>
+            </tr>
+
+            <tr> 
+                <th rowspan="3"> C </th>  <!-- 表格標題 <th> rowspan 為往下 -->
+                <td>66</td>
+                <td>44</td>
+            </tr>
+
+            <tr> 
+                <td>90</td>
+                <td>70</td>
+            </tr>
+
+            <tr> 
+                <td>90</td>
+                <td>70</td>
+            </tr>
+
+
+        </table>
+
+    </body>
+
+</html>

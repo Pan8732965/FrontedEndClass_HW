@@ -1,0 +1,49 @@
+<!--
+
+  三種設定樣式的方法：
+  1.  在 head 的 style 裡面設定 
+
+  2.  直接在標籤裡設定
+  e.g. <h1 style="color:rgb(9, 141, 16);text-align: center;"> The style Word Example </h1>
+
+  3. 引用css檔案
+  e.g. <link rel="stylesheet" href="test.css">
+  The <link> tag defines the relationship between the current document and an external resource.
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS</title>
+    <style> /* 在head 的 style 裡面設定 */
+        body {
+          color:rgb(7, 7, 7);
+          background-color: blanchedalmond;
+        }
+
+        
+        h1 {
+          color:rgb(9, 141, 16);
+          text-align: center;
+        }
+        
+
+        .txt {
+          font-size: 20;
+          font-family: Arial, Helvetica, sans-serif;
+          text-align: center;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>My First CSS Example</h1>
+    <p class="txt">This is a paragraph 1.</p>
+    <p>This is a paragraph 2.</p>
+    <p class="txt">This is a paragraph 3.</p>
+  </body>
+</html>

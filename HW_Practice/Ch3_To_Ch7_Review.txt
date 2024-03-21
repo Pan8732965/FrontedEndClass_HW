@@ -1,0 +1,204 @@
+# PPT 重點整理
+
+1. CSS樣式表是由選擇器(selector)與樣式規則(rule)所組成
+
+2. 
+(1) 選擇器(selector)：CSS樣式要套用的目標，目標可以是HTML標記、class屬性或id屬性。
+(2) 樣式規則(rule)：用大括號{}括起來的部份，每一個規則是由屬性及設定值組成。
+body{color:white} --> body:選擇器；color:屬性；white:值
+
+3. 網頁設計的流程：
+(1) 蒐集資料與網站架構
+(2) 網頁製作與測試
+(3) 將網站上傳至web伺服器，並加以推廣
+(4) 網站更新與維護
+
+4. HTML 5 的設計原則：
+(1) 相容性 (compatibility)
+(2) 實用性 (utility)
+(3) 操作性 (interoperability)
+(4) 通用存取性 (universal access)
+
+5.利用縮排標籤： <blockquote> 可以縮排： <blockquote> </blockquote>
+
+6. 分隔線標籤 <hr>
+
+7. 表單內容:
+
+<form method="post" action="">
+	請輸入帳號密碼<br />
+	帳號：<input type="text" name="username" size="20" /><br />
+	密碼：<input type="password" name="password" size="20" /><br />
+	<input type="submit" value="送出" />
+	<input type="reset" value="重填" />
+	<input type="button" value="回上頁" onclick="javascript:history.back();">
+</form>
+
+<form action="action_page.php"> //核取選單
+     <input type="radio" name="sex" value="male" checked/ >Male
+     <br> 
+     <input type="radio" name="sex" value="female" />Female
+     <br><br>
+</form>
+
+8. 文字區域欄位- textarea 
+
+<textarea name="memo" cols="20" rows="2" wrap="hard"> </textarea>
+
+9. 超連結的定址方式稱為URI (Universal Resource Identiﬁer)
+
+10. URL 的類型:
+- 絕對URI (Absolute URI)
+--> 包含通訊協定、伺服器名稱、資料夾和文件名稱。
+
+- 相對URI (Relative URI) 
+--> 包含資料夾和文件名稱(資料夾都可以省略不寫)
+
+11. 解析度是指在單位長度內的像素點數，單位為dpi(dot per inch)，是以每英吋包含幾個像素來計算。
+
+---
+# Code 重點整理
+
+<!--
+1. structruce: 
+<!DOCTYPE html> 
+<html lang="en"> 
+    <head>  
+        <meta charset="UTF-8">
+        <title> type title here </title>
+        <style>
+            body{
+                background-color:white;  // be aware of the " ; "!
+            }
+        <style>
+    </head>  
+
+    <body> 
+        ...
+    </body> 
+</html>
+
+2. the artile structure: 
+
+<section>
+
+    <article>
+
+        <header>  <h1> ...  <h1> </header>  // the header 
+
+        <p> ... </p> // article main content using paragraph
+
+    </article>
+
+</section>
+
+-->
+
+<!--
+1. Allow set the color in the "body" tag: <body bgcolor="#da70d6"> </body>
+
+2. the <pre> tag can preformat the text, like in the HTML souce code.It's useful especially in code.
+    e.g. <pre> <code> </code> </pre> 
+
+-->
+
+<!--
+    1. Able to use "text-decoration:underline;" in the header of the style tag.
+
+    2. list points:
+
+    <ul> //means "unordered lists"
+
+        <li> </li> //means "list">
+
+            <ol type="1" start="1"> 
+                
+                // means "ordered list"
+                // type	1,A,a,I,i
+
+                <li> </li>
+            <ol>
+    </ul>
+
+-->
+
+<!--
+
+    1. establishment of the table style:
+
+    table{
+        border-collapse: collapse; // collapse: turn into the seperate table, instead of the shared table.
+        width:100%;
+    }
+
+    th, td{
+        border:1px solid black;
+        padding:8px; // 表格標題與資料的個別面積填充
+        text-align:center;
+    }
+
+    2. establishment of the table 
+
+    <table>
+
+        <tr> //列
+
+            <td> ... </td> 表格個別格的資料
+
+        </tr> 
+
+
+    </table>
+
+    -> 建立表格方法：(1) 先看幾列，先照列數建立<tr> ; (2) 在依序填充 <td> 
+        (3) 依照：表格資料 <td> rowspan 為往右、表格標題 <th> rowspan 為往下的規則視情況延伸
+
+-->
+
+<!--
+
+    1. <ul type="circle"> // 空心圓的列點方式
+    2. <a href="AAA.html"> the link of description  </a> 
+    3. mail can use mailto.
+       e.g. <a href="mailto:example@example.com"> 寫信 </a>
+
+-->
+
+<!-- 
+
+    1. 圖片：<img src=".jpg" alt="Zoo" usemap="#ZooMap" width="" height=""> width and height can take the photo detail for reference.
+    2. map:
+    <map name="ZooMap">
+        <area shape="circle,rect,ploy" coords="" alt="AreaNameHere" href="aaa.html">
+        // map rect, poly 為逆時針記點座標，而形成圖形。
+    </map>
+
+-->
+
+<!--
+
+	1. <a href="AAA.html" rel="link"> the link of description  </a> 
+	2. audio:
+		<audio controls>
+			<source src="audio/01.mp3" type="audio/mpeg">
+			Your vrower does not support the audio tag.
+		</audio>
+	3. Videos can be embedded using iframes, especially YouTube videos, for which the iframe code can be copied from the YouTube website.
+	
+-->
+
+<!--
+
+  三種設定樣式的方法：
+  1.  在 head 的 style 裡面設定 
+
+  2.  直接在標籤裡設定
+  e.g. <h1 style="color:rgb(9, 141, 16);text-align: center;"> The style Word Example </h1>
+
+  3. 引用css檔案
+  e.g. <link rel="stylesheet" href="test.css">
+  The <link> tag defines the relationship between the current document and an external resource.
+
+-->
+
+---
