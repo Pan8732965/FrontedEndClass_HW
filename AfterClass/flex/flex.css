@@ -1,0 +1,25 @@
+*{
+    width:0px;
+    padding: 0px;
+}
+
+.array{
+    width: 1400px;
+    background-color: black;
+    display: flex; /*橫向排列*/
+    flex-wrap: wrap; /*自動換行與對齊*/
+    justify-content: center; /*元素的置中*/
+    align-items: center;
+
+.item{
+    width: 300px;
+    height: 300px;
+}
+
+.item:nth-child(2n+1){
+    background-color: red;
+}
+
+.item:nth-child(2n){
+    background-color: yellow;
+}

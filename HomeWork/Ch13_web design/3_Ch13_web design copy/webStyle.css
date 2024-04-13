@@ -1,0 +1,60 @@
+*{
+    box-sizing: border-box;
+    max-width: 1024px;
+    margin:0 auto;
+}
+
+body{
+    background-color: #fdecff;
+    margin:0px;
+}
+
+header{
+    background-color: #9d6381;
+    color: white;
+    text-align: center;
+    margin:0px;
+    padding:20px;
+}
+
+nav{
+    background-color: #E5CADA;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav a{
+    padding: 14px 16px; /* 留白 */
+    display: inline-block;
+}
+
+nav a:hover{ /* 偵測滑鼠有無滑到此處 */
+    background-color: #cda8b8;
+    color: white;
+}
+
+footer{
+    background-color: #cda8b8;
+    color:#444444;
+    text-align: center;
+    padding: 10px;
+}
+
+.clearFix{
+    clear:both;
+}
+
+.card{
+    /*background-color: white;*/
+    background-image: url(image/card_img.jpg);
+    background-size: cover;
+    padding:20px;
+    margin:20px 10px;
+    border-radius: 15px;
+}
+
+.card01{
+    text-align: center;
+}
+
+
