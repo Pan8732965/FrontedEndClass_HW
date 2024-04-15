@@ -20,6 +20,7 @@ nav{ /* 最上方欄位 */
     padding: 6px;
     text-align: center;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); /* 添加微弱的黑色陰影 */
+    z-index: 1000; /* 設置工具列的 z-index 值，使工具列可以保持在最上圖層 */
     
 }
 
@@ -63,7 +64,6 @@ nav a:hover{ /* 偵測滑鼠有無滑到此處 */
 }
 
 .PhotoSticker {
-
     
     margin-left: 70px; /* 右側留白 */
     margin-right: 70px; /* 左側留白 */
@@ -242,49 +242,34 @@ nav a:hover{ /* 偵測滑鼠有無滑到此處 */
     font-size:18px;
 }
 
-.WritingClass_Certificate {
+.WritingClass_ImgContainer{
 
-    
-    margin-left: 320px; /* 右側留白 */
-    margin-right: 320px; /* 左側留白 */
+    display: flex;
+    justify-content: space-between; /* 控制子元素間的間距 */
     letter-spacing: 1px;
     margin-bottom: 10px;
-    
-    
-    position:relative;
-    width: 340px;
-    height:250px;
-    border-radius: 10%;
-    overflow: hidden;
-    
-}
-
-.WritingClass_Certificate img{
-    position: relative;
-    top:0;
-    left: 0;
-    width:100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.WritingClass_ArticleCover {
-
-    
     margin-left: 320px; /* 右側留白 */
     margin-right: 320px; /* 左側留白 */
-    letter-spacing: 1px;
-    margin-bottom: 10px;
-    
-    
-    position:relative;
-    width: 340px;
-    height:250px;
-    border-radius: 10%;
-    overflow: hidden;
-    
+
 }
 
+.WritingClass_Certificate{
+    position:relative;
+    width: 380px;
+    height:269px;
+    border-radius: 5%;
+    overflow: hidden;
+}
+
+.WritingClass_ArticleCover{
+    position:relative;
+    width: 380px;
+    height:269px;
+    border-radius: 5%;
+    overflow: hidden;
+}
+
+.WritingClass_Certificate img
 .WritingClass_ArticleCover img{
     position: relative;
     top:0;
@@ -383,6 +368,14 @@ aside{
     clear:both;
 }
 
+.footerSetting{
+
+    background-color: #588157;
+    color:#DAD7CD;
+    text-align: center;
+    padding: 6px;
+    
+}
 footer{
     background-color: #588157;
     color:#DAD7CD;
