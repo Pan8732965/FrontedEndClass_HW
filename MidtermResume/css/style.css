@@ -42,7 +42,25 @@ nav a:hover{ /* 偵測滑鼠有無滑到此處 */
     text-decoration: none;
 }
 
-/*---*/
+.separator{ /* 分隔線 */
+
+    border-top: 1px solid #7b7b7b; /* 黑色分隔線，1px 寬度 */
+    width: 50%;
+    margin: 30px auto; 
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5); /* 添加陰影效果 */
+
+}
+
+.separator_BasicInformation{ /* 分隔線 */
+
+    border-top: 1px solid #7b7b7b; /* 黑色分隔線，1px 寬度 */
+    width: 50%;
+    margin: 10px auto; 
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5); /* 添加陰影效果 */
+
+}
+
+/*---Basic Information 個人基本資訊區 ---*/
 
 .BasicInfo {
     display: flex; /* 使用 Flexbox 布局 */
@@ -96,7 +114,7 @@ nav a:hover{ /* 偵測滑鼠有無滑到此處 */
     
 }
 
-/*---*/
+/*--- My Ability 技能能力區 ---*/
 
 .MyAbility {
 
@@ -166,7 +184,7 @@ nav a:hover{ /* 偵測滑鼠有無滑到此處 */
     cursor: pointer;
 }
 
-/*---*/
+/*--- OutOfSchoolExperience 校外經歷區--- */
 
 .OutOfSchoolExperience {
 
@@ -205,8 +223,7 @@ nav a:hover{ /* 偵測滑鼠有無滑到此處 */
 .NTUSeedChiTeacher_Certificate {
 
     
-    margin-left: 320px; /* 右側留白 */
-    margin-right: 320px; /* 左側留白 */
+    margin:0 auto; /* 置中對齊 */
     letter-spacing: 1px;
     margin-bottom: 10px;
     
@@ -245,39 +262,31 @@ nav a:hover{ /* 偵測滑鼠有無滑到此處 */
 .WritingClass_ImgContainer{
 
     display: flex;
-    justify-content: space-between; /* 控制子元素間的間距 */
+    justify-content: center; /* 將 flex 內容水平置中 */
+    align-items: center; /* 將 flex 內容垂直置中 */
+
     letter-spacing: 1px;
     margin-bottom: 10px;
-    margin-left: 320px; /* 右側留白 */
-    margin-right: 320px; /* 左側留白 */
 
 }
 
-.WritingClass_Certificate{
+.WritingClass_Certificate{ /*寫作課證書圖片容器設定 */
     position:relative;
-    width: 380px;
-    height:269px;
+    width: 340px;
+    height:250px;
+    border-radius: 5%;
+    overflow: hidden;
+    margin-right: 20px; /* 右側留白 */
+}
+
+.WritingClass_ArticleCover{ /*寫作課刊登文章之圖片容器設定 */
+    position:relative;
+    width: 300px; /*340*315*/
+    height:275px;
     border-radius: 5%;
     overflow: hidden;
 }
 
-.WritingClass_ArticleCover{
-    position:relative;
-    width: 380px;
-    height:269px;
-    border-radius: 5%;
-    overflow: hidden;
-}
-
-.WritingClass_Certificate img
-.WritingClass_ArticleCover img{
-    position: relative;
-    top:0;
-    left: 0;
-    width:100%;
-    height: 100%;
-    object-fit: cover;
-}
 
 .SanCodeCompetion_Title {
     color:#353535;
@@ -295,21 +304,20 @@ nav a:hover{ /* 偵測滑鼠有無滑到此處 */
 
 .SanCodeCompetion_Certificate {
 
-    
-    margin-left: 320px; /* 右側留白 */
-    margin-right: 320px; /* 左側留白 */
+    margin:0 auto; /* 置中對齊 */
     letter-spacing: 1px;
     margin-bottom: 10px;
     
-    
     position:relative;
-    width: 340px;
-    height:250px;
+    width: 300px;
+    height:410px; /* 110 個像素長寬位差 */
     border-radius: 10%;
     overflow: hidden;
     
 }
 
+.WritingClass_Certificate img, /* 圖片內部設定 */
+.WritingClass_ArticleCover img,
 .SanCodeCompetion_Certificate img{
     position: relative;
     top:0;
@@ -319,7 +327,8 @@ nav a:hover{ /* 偵測滑鼠有無滑到此處 */
     object-fit: cover;
 }
 
-/*---*/
+
+/*--- WorkExperience 工作經驗區 ---*/
 
 .WorkExperience {
 
@@ -348,34 +357,16 @@ nav a:hover{ /* 偵測滑鼠有無滑到此處 */
 .WorkExperience ul li{
     position: relative;
     list-style: none;
-    padding-bottom: 15px;
     margin: 10px 0;
     cursor: pointer;
     text-align: center;
 }
 
-
-
-/*---*/
-
-aside{
-    float:right;
-    width:25%;
-    text-align: center;
-}
-
+/* --- 基本頁尾設定 --- */
 .clearFix{
     clear:both;
 }
 
-.footerSetting{
-
-    background-color: #588157;
-    color:#DAD7CD;
-    text-align: center;
-    padding: 6px;
-    
-}
 footer{
     background-color: #588157;
     color:#DAD7CD;

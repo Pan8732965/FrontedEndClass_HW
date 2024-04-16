@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>個人履歷網頁</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/specialEffect.css">
 </head>
 
 <body>
@@ -20,13 +21,13 @@
     </header>-->
   
     <nav>
-        <a href="#">基本資訊</a>
-        <a href="#">各項能力</a>
-        <a href="#">校外經歷</a>
-        <a href="#">工作經歷</a>
+        <a href="#BasicInfo">基本資訊</a>
+        <a href="#MyAbility">各項能力</a>
+        <a href="#OutOfSchoolExperience">校外經歷</a>
+        <a href="#WorkExperience">工作經歷</a>
     </nav>
   
-        <section class="BasicInfo">
+        <section class="BasicInfo" id="BasicInfo">
 
             <h2>基本資訊</h2>
 
@@ -43,7 +44,7 @@
 
         </section>
 
-        <section class="MyAbility">
+        <section class="MyAbility" id="MyAbility">
 
             <h2>各項能力</h2>
 
@@ -59,6 +60,8 @@
                     Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </p>
             </div>
+
+            <div class="separator_BasicInformation"></div> <!-- 分隔線 -->
 
             <div class="VideoEditting">
 
@@ -76,6 +79,8 @@
 
             </div>
 
+            <div class="separator_BasicInformation"></div> <!-- 分隔線 -->
+
             <div class="EnglishAbility">
 
                 <h3 class="EnglishAbility_Title">英文能力</h3>
@@ -92,7 +97,7 @@
 
         </section>
 
-        <section class="OutOfSchoolExperience">
+        <section class="OutOfSchoolExperience" id="OutOfSchoolExperience">
 
             <h2>校外經歷</h2>
 
@@ -107,6 +112,8 @@
                 </div>
 
             </div>
+
+            <div class="separator"></div> <!-- 分隔線 -->
 
             <div class="WritingClass">
 
@@ -133,6 +140,8 @@
 
             </div>
 
+            <div class="separator"></div> <!-- 分隔線 -->
+
             <div class="SanCodeCompetion">
 
                 <h3 class="SanCodeCompetion_Title">【 112-1學期 2023 第二屆善科科技文藝獎參賽證書】</h3>
@@ -151,7 +160,7 @@
 
         </section>
 
-        <section class="WorkExperience">
+        <section class="WorkExperience" id="WorkExperience">
 
             <h2>工作經歷</h2>
 
@@ -161,11 +170,17 @@
                             2023 年 9 月 - 2024 年 5 月  育昇大成補習班擔任輔導老師
                         </h3>
                     </li>
+
+                    <div class="separator"></div> <!-- 分隔線 -->
+
                     <li>
                         <h3 class="WorkExperience_Title">
                             2022 年 9 月 - 2023 年 9 月  猿創力程式學校擔任小學程式老師
                         </h3>
                     </li>
+
+                    <div class="separator"></div> <!-- 分隔線 -->
+
                     <li>
                         <h3 class="WorkExperience_Title">
                             2022 年 7 月 - 2022 年 8 月  擔任暑期兒童程式家教(遠端教學)
